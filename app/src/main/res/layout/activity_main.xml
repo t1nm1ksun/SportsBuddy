@@ -6,13 +6,385 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar1"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="#8DAAD6"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/backBtn"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="15dp"
+            android:src="@drawable/baseline_arrow_back_ios_24" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="SPORTS BUDDY"
+            android:textColor="@android:color/white"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:src="@drawable/ic_launcher_foreground" />
+        <!--TODO: src 나중에 사용자 프로필 사진으로 바꾸기-->
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <LinearLayout
+        android:id="@+id/settingBar"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:background="#E8EEF7"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/toolbar1">
+
+        <HorizontalScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="50dp"
+                    android:layout_height="20dp"
+                    android:layout_margin="15dp"
+                    android:background="@drawable/baseline_lightgraysquare_24"
+                    android:text="20대"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="50dp"
+                    android:layout_height="20dp"
+                    android:layout_margin="15dp"
+                    android:text="남자"
+                    android:background="@drawable/baseline_lightgraysquare_24"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="50dp"
+                    android:layout_height="20dp"
+                    android:layout_margin="15dp"
+                    android:text="광진구"
+                    android:background="@drawable/baseline_lightgraysquare_24"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="50dp"
+                    android:layout_height="20dp"
+                    android:layout_margin="15dp"
+                    android:text="헬스"
+                    android:background="@drawable/baseline_lightgraysquare_24"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="50dp"
+                    android:layout_height="20dp"
+                    android:layout_margin="15dp"
+                    android:text="축구"
+                    android:background="@drawable/baseline_lightgraysquare_24"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"/>
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+        <ImageView
+            android:id="@+id/settingBtn"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:src="@drawable/baseline_tune_24" />
+
+    </LinearLayout>
+
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/settingBar"
+        app:layout_constraintBottom_toTopOf="@id/bottom_navigation"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:text="Data 1"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#8DAAD6"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:text="Data 2"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#8DAAD6"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:text="Data 3"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#8DAAD6"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:text="Data 4"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#8DAAD6"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:text="Data 5"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#8DAAD6"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:text="Data 6"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#8DAAD6"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:text="Data 7"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#8DAAD6"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:text="Data 8"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#8DAAD6"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:text="Data 9"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#8DAAD6"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:text="Data 10"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#8DAAD6"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:text="Data 11"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#8DAAD6"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:text="Data 12"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#8DAAD6"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:text="Data 13"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#8DAAD6"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:text="Data 14"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#8DAAD6"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:text="Data 15"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#8DAAD6"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:text="Data 16"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                />
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bottom_navigation"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:menu="@menu/menu"
+        android:layout_gravity="bottom"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
