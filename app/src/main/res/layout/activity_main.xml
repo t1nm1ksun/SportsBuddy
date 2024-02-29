@@ -40,7 +40,7 @@
                 android:layout_gravity="center"
                 android:text="SPORTS BUDDY"
                 android:textColor="@android:color/white"
-                android:textSize="15dp"
+                android:textSize="13sp"
                 android:textStyle="bold"/>
 
         </LinearLayout>
@@ -48,6 +48,7 @@
 
 
         <ImageView
+            android:id="@+id/profilePhoto"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="end"
@@ -403,5 +404,9 @@
         app:menu="@menu/menu"
         android:layout_gravity="bottom"
         />
+
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

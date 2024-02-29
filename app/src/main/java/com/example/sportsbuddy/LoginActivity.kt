@@ -40,7 +40,7 @@ class LoginActivity : AppCompatActivity() {
         login.setOnClickListener {
             val email = findViewById<EditText>(R.id.email)
             val password = findViewById<EditText>(R.id.password)
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this@LoginActivity, MainActivity::class.java)
             auth.signInWithEmailAndPassword(email.text.toString(), password.text.toString())
                 .addOnCompleteListener(this) { task ->
                     if (task.isSuccessful) {
