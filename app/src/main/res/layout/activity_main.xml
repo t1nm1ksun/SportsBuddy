@@ -20,14 +20,31 @@
             android:layout_marginStart="15dp"
             android:src="@drawable/baseline_arrow_back_ios_24" />
 
-        <TextView
+        <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
             android:layout_gravity="center"
-            android:text="SPORTS BUDDY"
-            android:textColor="@android:color/white"
-            android:textSize="15dp"
-            android:textStyle="bold" />
+            >
+            <ImageView
+                android:layout_margin="7dp"
+                android:layout_width="56dp"
+                android:layout_height="31dp"
+                android:layout_gravity="center"
+                android:src="@drawable/mainlogo"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="SPORTS BUDDY"
+                android:textColor="@android:color/white"
+                android:textSize="15dp"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
 
 
         <ImageView
