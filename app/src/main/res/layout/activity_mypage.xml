@@ -84,22 +84,106 @@
             app:layout_constraintTop_toBottomOf="@id/mainpage"
             android:layout_marginTop="23dp"
             />
+        
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="28dp"
+            android:background="#D9D9D9"
+            />
 
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="70dp"
+            android:layout_height="28dp"
+            android:background="@drawable/baseline_bluesquare_24"
+            android:layout_gravity="center"
+            android:layout_marginTop="18dp"
+            android:text="사진 변경"
+            android:textColor="@color/white"
+            android:textSize="13sp"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="11dp"
+            >
+            <TextView
+                android:id="@+id/tv_set_profile_nickname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="닉네임"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iv_setprofile_defaultprofile" />
+
+            <EditText
+                android:id="@+id/et_setprofile_nickname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:autofillHints="이메일"
+                android:background="@drawable/baseline_edittextsquare_24"
+                android:hint="열정적인 짱구 #4223"
+                android:inputType="textPassword"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:selectAllOnFocus="true"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@id/tv_set_profile_nickname"
+                app:layout_constraintTop_toBottomOf="@+id/iv_setprofile_defaultprofile"
+                tools:ignore="RtlSymmetry" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/img_change_button"
+                app:circularflow_radiusInDP="15dp"
+                android:layout_marginStart="23dp"
+                />
+
+        </LinearLayout>
+
+
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/logout"
-            android:layout_width="wrap_content"
-            android:layout_height="48dp"
-            app:layout_constraintTop_toBottomOf="@id/line"
-            android:layout_gravity="center"
-            android:layout_marginTop="540dp"
+            android:layout_width="100dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="40dp"
+            android:textSize="14sp"
+            android:text="설정완료"
+            android:textColor="@color/white"
+            android:background="@drawable/baseline_bluesquare_24"
+            android:layout_marginRight="15dp"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/edit"
+            android:layout_width="100dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="40dp"
             android:textSize="14sp"
             android:text="로그아웃"
-            android:paddingRight="10dp"
-            android:paddingLeft="10dp"
             android:textColor="@color/white"
             android:background="@drawable/baseline_bluesquare_24"
             />
+
 
     </LinearLayout>
 
