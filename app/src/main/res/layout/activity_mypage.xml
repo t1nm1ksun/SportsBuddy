@@ -23,16 +23,15 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:orientation="vertical"
             android:layout_gravity="center"
-            >
+            android:orientation="vertical">
+
             <ImageView
-                android:layout_margin="7dp"
                 android:layout_width="56dp"
                 android:layout_height="31dp"
                 android:layout_gravity="center"
-                android:src="@drawable/mainlogo"
-                />
+                android:layout_margin="7dp"
+                android:src="@drawable/mainlogo" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -41,10 +40,9 @@
                 android:text="SPORTS BUDDY"
                 android:textColor="@android:color/white"
                 android:textSize="13sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
 
         </LinearLayout>
-
 
 
         <ImageView
@@ -60,10 +58,10 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar1"
         android:layout_marginTop="30dp"
-        >
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar1">
+
         <TextView
             android:id="@+id/mainpage"
             android:layout_width="wrap_content"
@@ -71,43 +69,40 @@
             android:layout_gravity="center"
             android:text="프로필 변경"
             android:textSize="15sp"
-            android:textStyle="bold"
-            />
+            android:textStyle="bold" />
 
         <View
             android:id="@+id/line"
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:background="#8DAAD6"
             android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
-            app:layout_constraintTop_toBottomOf="@id/mainpage"
             android:layout_marginTop="23dp"
-            />
-        
+            android:layout_marginRight="15dp"
+            android:background="#8DAAD6"
+            app:layout_constraintTop_toBottomOf="@id/mainpage" />
+
         <ImageView
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_gravity="center"
             android:layout_marginTop="28dp"
-            android:background="#D9D9D9"
-            />
+            android:background="#D9D9D9" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:layout_width="70dp"
             android:layout_height="28dp"
-            android:background="@drawable/baseline_bluesquare_24"
             android:layout_gravity="center"
             android:layout_marginTop="18dp"
+            android:background="@drawable/baseline_bluesquare_24"
             android:text="사진 변경"
             android:textColor="@color/white"
-            android:textSize="13sp"
-            />
+            android:textSize="13sp" />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="11dp"
-            >
+            android:layout_marginTop="16dp">
+
             <TextView
                 android:id="@+id/tv_set_profile_nickname"
                 android:layout_width="wrap_content"
@@ -137,17 +132,54 @@
                 tools:ignore="RtlSymmetry" />
 
             <ImageButton
-                android:layout_width="wrap_content"
+                android:layout_width="32dp"
                 android:layout_height="match_parent"
-                android:src="@drawable/img_change_button"
-                app:circularflow_radiusInDP="15dp"
                 android:layout_marginStart="23dp"
+                android:background="@drawable/baseline_edittextsquare_24"
+                android:src="@drawable/img_change_button"
+                app:circularflow_radiusInDP="15dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp">
+
+            <TextView
+                android:id="@+id/tv_set_profile_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="동네설정"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iv_setprofile_defaultprofile" />
+
+            <!-- 시 선택 -->
+            <Spinner
+                android:id="@+id/spinner_city"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_marginStart="14dp"
+                android:entries="@array/city_array" />
+
+            <!-- 구 선택 -->
+            <Spinner
+                android:id="@+id/spinner_district"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_marginStart="14dp" />
+
+            <!-- 동 선택 -->
+            <Spinner
+                android:id="@+id/spinner_neighborhood"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_marginStart="14dp"
                 />
 
         </LinearLayout>
-
-
-
 
 
     </LinearLayout>
@@ -157,32 +189,29 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="40dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        >
+        app:layout_constraintStart_toStartOf="parent">
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/logout"
             android:layout_width="100dp"
             android:layout_height="35dp"
             android:layout_marginTop="40dp"
-            android:textSize="14sp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/baseline_bluesquare_24"
             android:text="설정완료"
             android:textColor="@color/white"
-            android:background="@drawable/baseline_bluesquare_24"
-            android:layout_marginRight="15dp"
-            />
+            android:textSize="14sp" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/edit"
             android:layout_width="100dp"
             android:layout_height="35dp"
             android:layout_marginTop="40dp"
-            android:textSize="14sp"
+            android:background="@drawable/baseline_bluesquare_24"
             android:text="로그아웃"
             android:textColor="@color/white"
-            android:background="@drawable/baseline_bluesquare_24"
-            />
+            android:textSize="14sp" />
 
 
     </LinearLayout>
