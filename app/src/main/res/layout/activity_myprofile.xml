@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools">
+    android:layout_height="match_parent">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar1"
-        tools:ignore="MissingConstraints"
         android:layout_width="match_parent"
         android:layout_height="70dp"
-        android:background="#8DAAD6">
+        android:background="#8DAAD6"
+        tools:ignore="MissingConstraints">
 
         <ImageView
             android:id="@+id/backBtn"
@@ -51,6 +52,249 @@
         <!--TODO: src 나중에 사용자 프로필 사진으로 바꾸기-->
 
     </androidx.appcompat.widget.Toolbar>
+
+
+    <LinearLayout
+        android:id="@+id/profile_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="45dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar1">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="닉네임 :  "
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_myprofile_nickname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="열정적인 짱구"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="나이 :  "
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_myprofile_age"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="24 세"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="성별 :  "
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_myprofile_gender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="남자"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="지역 :  "
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_myprofile_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="서울시 광진구 화양동"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_myprofile_defaultprofile"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/img_default_picture"
+        app:layout_constraintBottom_toBottomOf="@id/profile_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/profile_layout"
+        app:layout_constraintTop_toTopOf="@id/profile_layout" />
+
+    <ImageView
+        android:id="@+id/iv_myprofile_firstline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="49dp"
+        android:src="@drawable/img_line"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profile_layout" />
+
+    <TextView
+        android:id="@+id/tv_myprofile_favorite_sports"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="45dp"
+        android:text="관심종목"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_myprofile_firstline" />
+
+    <LinearLayout
+        android:id="@+id/favorite_sports_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="19dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="34dp"
+        android:weightSum="4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_myprofile_favorite_sports">
+
+        <CheckBox
+            android:id="@+id/cb1"
+            android:layout_width="0dp"
+            android:layout_height="28dp"
+            android:layout_weight="1"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/checkbox_background"
+            android:button="@null"
+            android:checked="false"
+            android:text="헬스"
+            android:textAlignment="center"
+            android:textColor="@drawable/checkbox_textcolor"
+            android:textSize="15sp" />
+
+        <CheckBox
+            android:id="@+id/cb2"
+            android:layout_width="0dp"
+            android:layout_height="28dp"
+            android:layout_marginStart="40dp"
+            android:layout_weight="1"
+            android:background="@drawable/checkbox_background"
+            android:button="@null"
+            android:checked="false"
+            android:text="풋살"
+            android:textAlignment="center"
+            android:textColor="@drawable/checkbox_textcolor"
+            android:textSize="15sp" />
+
+        <CheckBox
+            android:id="@+id/cb3"
+            android:layout_width="0dp"
+            android:layout_height="28dp"
+            android:layout_marginStart="40dp"
+            android:layout_weight="1"
+            android:background="@drawable/checkbox_background"
+            android:button="@null"
+            android:text="농구"
+            android:textAlignment="center"
+            android:textColor="@drawable/checkbox_textcolor" />
+
+        <CheckBox
+            android:id="@+id/cb4"
+            android:layout_width="0dp"
+            android:layout_height="28dp"
+            android:layout_marginStart="40dp"
+            android:layout_weight="1"
+            android:background="@drawable/checkbox_background"
+            android:button="@null"
+            android:text="축구"
+            android:textAlignment="center"
+            android:textColor="@drawable/checkbox_textcolor" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_myprofile_introduce"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="45dp"
+        android:text="소개 : 안농"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/favorite_sports_layout" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/logout"
+            android:layout_width="150dp"
+            android:layout_height="35dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/baseline_bluesquare_24"
+            android:text="설정완료"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/edit"
+            android:layout_width="150dp"
+            android:layout_height="35dp"
+            android:background="@drawable/baseline_bluesquare_24"
+            android:text="로그아웃"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+
+    </LinearLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
