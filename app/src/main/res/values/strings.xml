@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">SportsBuddy</string>
+    <string name="cb1">헬스</string>
+    <string name="cb2">풋살</string>
+    <string name="cb3">농구</string>
+    <string name="cb4">축구</string>
+    <string name="cb5">런닝</string>
+    <string name="cb6">탁구</string>
+    <string name="cb7">볼링</string>
+    <string name="cb8">골프</string>
 </resources>
