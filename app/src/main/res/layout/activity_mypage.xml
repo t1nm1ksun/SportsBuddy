@@ -330,7 +330,7 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/logout"
+            android:id="@+id/edit"
             android:layout_width="100dp"
             android:layout_height="35dp"
             android:layout_marginRight="15dp"
@@ -340,7 +340,7 @@
             android:textSize="14sp" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/edit"
+            android:id="@+id/logout"
             android:layout_width="100dp"
             android:layout_height="35dp"
             android:background="@drawable/baseline_bluesquare_24"

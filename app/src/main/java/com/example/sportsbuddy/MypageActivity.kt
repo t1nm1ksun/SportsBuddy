@@ -23,10 +23,22 @@ class MypageActivity : AppCompatActivity() {
             Toast.makeText(this, "로그아웃 완료", Toast.LENGTH_SHORT).show()
             goLoginpage()
         }
+
+        val edit = findViewById<Button>(R.id.edit)
+        edit.setOnClickListener{
+            Toast.makeText(this,"설정 완료",Toast.LENGTH_SHORT).show()
+            goMainpage()
+        }
     }
 
     private fun goLoginpage(){
         val intent = Intent(this, LoginActivity::class.java)
+        startActivity(intent)
+        finish() // 현재 액티비티를 종료하고 로그인 액티비티로 이동
+    }
+
+    private fun goMainpage(){
+        val intent = Intent(this, MainActivity::class.java)
         startActivity(intent)
         finish() // 현재 액티비티를 종료하고 로그인 액티비티로 이동
     }
